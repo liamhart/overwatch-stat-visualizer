@@ -1,0 +1,281 @@
+.fill:hover {
+    box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.fill {
+    color: #ffffff;
+    --hover: #f99e1a;
+}
+
+.showbox {
+    height: 200px;
+    width: 200px;
+    background: #ffffff;
+    margin: auto;
+    margin-bottom: 60px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 5px solid silver;
+}
+
+
+button {
+    color: #ffffff;
+    transition: 0.25s;
+}
+button:hover, button:focus {
+    border-color: var(--hover);
+    color: #fff;
+}
+
+button {
+    background: none;
+    border: 2px solid white;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    color: #ffffff;
+}
+
+/* Page body stuff */
+html, body, .main {
+    height: 100vh;
+    margin: 0;
+    background: #0c112e;
+}
+
+
+section {
+    min-height: 100vh;
+}
+
+.text {
+    font-family: 'Lato';
+}
+
+.h1-text {
+    font-weight: 900;
+    font-size: 5em;
+    color: #ffffff;
+}
+
+.h3-text {
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+.disclaimer {
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+.slide {
+    display: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+hr {
+    width: 470px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.content{
+    padding-top: 25%;
+    text-align: center;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.background {
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:#1B2030 url("../content/news_background_overwatch.jpg") top center no-repeat;
+    background-size:cover;
+}
+
+.buffer {
+    padding-bottom: 50px;
+}
+
+.hoz-buffer {
+    margin-right: 20px;
+    display: inline;
+}
+
+
+/* Login and Register forms */
+
+.inputBox {
+    padding-left: 35vw;
+    padding-top: 5vh;
+}
+
+
+input[type=text], input[type=password], input[type=email] {
+    width: 25vw;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+
+.long-boi {
+    width: 25vw;
+    border-radius: 50px;
+}
+
+.short-boi {
+    width: 15vw;
+    height: 50px;
+    border-radius: 50px;
+}
+
+#formOptionOR {
+    text-align: center;
+    padding-bottom: 2vh;
+}
+
+/* graphic from: https://www.vexels.com/png-svg/preview/143555/red-and-yellow-3d-question-mark */
+.profile {
+    height: 200px;
+    width: 200px;
+    margin-left: 7vw;
+    margin-bottom: 60px;
+    border-radius: 500px;
+}
+
+
+#signIcon {
+    background: #ffffff url("/content/af8dbc9112fe8ee9328539534b5a6548-red-and-yellow-3d-question-mark-by-vexels.png") top center no-repeat;
+    background-size: cover;
+}
+
+
+
+.center {
+    margin: auto;
+    position: absolute;
+}
+
+
+img.avatar {
+    width: 40%;
+}
+
+/* search form stuff */
+#searchSection input[type=text] {
+    width: 49vw;
+    margin: auto;
+    display: inline;
+    float: left;
+}
+
+#searchSection > .short-boi {
+    display: inline;
+    float: left;
+}
+
+#searchSection {
+    padding-top: 25%;
+    margin-left: 15%;
+}
+
+
+/* results section stuff */
+
+#resultsBox {
+    height: 16em;
+    width: 16em;
+    float: left;
+    display: inline;
+    margin-right: 5%;
+}
+
+.results-display {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.username-text {
+    font-style: italic;
+    font-variant: all-petite-caps;
+    font-size: 8em;
+    color: #ffffff;
+    float: left;
+    display: inline;
+    padding-top: 104px;
+}
+
+
+.skill-text {
+    font-size: 1.4em;
+    color: #ffffff;
+}
+
+.display {
+    padding-top: 170px;
+    position: relative;
+    display: block;
+    padding-left: 5%;
+    border-top: 1px solid white;
+}
+
+.rating-display {
+    top: 22%;
+    right: 10%;
+    width: 150px;
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+}
+
+.rating-display > hr {
+    width: 150px;
+}
+
+.character-profile {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 5px solid #1B2030;
+}
+
+.favourites-display {
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    width: 250px;
+    height: 300px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 5px solid #ccc;
+}
+
+.favourite-button {
+    position: fixed;
+    left: 5%;
+    bottom: 59%;
+}
+
+.invisible {
+    display: none;
+}
+
+.thumbnail:hover {
+    -moz-transform: translate(-2px, -2px);
+    -ms-transform: translate(-2px, -2px);
+    -o-transform: translate(-2px, -2px);
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px)
+}

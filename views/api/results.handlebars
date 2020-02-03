@@ -1,0 +1,49 @@
+<div class="background">
+
+    <div class="results-display">
+
+        <div class="showbox" style="background: url({{img}}); background-size: cover;" id="resultsBox"></div>
+
+        <h3 class="username-text">{{username}}</h3>
+
+        {{#if rating}}
+            <div class="rating-display">
+                <h3 class="text skill-text">Skill Rating</h3>
+
+                <hr>
+
+                <h3 class="text skill-text"><img src="{{ratingIcon}}" width="45px" height="40px" style="margin-top: -5px; margin-right: 10px;">{{rating}}</h3>
+
+
+            </div>
+        {{else}}
+            <div class="rating-display">
+                <h3 class="text skill-text">Skill Rating</h3>
+
+                <hr>
+
+                <h3 class="text skill-text">NA</h3>
+
+            </div>
+        {{/if}}
+
+    </div>
+
+    {{#if user}}
+        {{#ifNotIn searchID user.favourites}}
+            <form method="post" action="/api/results" class="favourite-button">
+                <input type="hidden" name="searchID" value="{{searchID}}">
+                <div class="favourite">
+                    <button type="submit" class="fill text"><i class="glyphicon glyphicon-star" style="padding-right: 15px; margin-left: -5px;"></i>Add to {{user.username}}'s Favourites</button>
+                </div>
+            </form>
+        {{/ifNotIn}}
+    {{/if}}
+
+    <div style="padding-bottom: 300px;"></div>
+
+
+    {{>display}}
+
+
+</div>

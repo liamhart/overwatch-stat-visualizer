@@ -1,0 +1,158 @@
+<div class="container display">
+    <div class="row">
+
+        {{#each heroData as |hero index|}}
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+
+                    <img src="{{#formUrl "/content/game_art/ga_" index ".png"}}{{/formUrl}}" class="character-profile">
+                    <h3 style="font-style: italic; font-variant: all-petite-caps; font-size: 2.0em; text-align: center;">{{index}}</h3>
+                    <h3>Games Won: {{hero.gamesWon}}</h3>
+                    <h3>Play Time: {{#playTime hero.timePlayedInSeconds}}{{/playTime}} hours</h3>
+
+
+
+                </div>
+            </div>
+
+        {{/each}}
+
+
+        {{!--
+        Does the same as this (minus attributes):
+
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+                <h3>Games Won: </h3>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div><div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+            <img src="/content/game_art/ga_ana.png">
+        </div>
+    </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div><div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+            <img src="/content/game_art/ga_ana.png">
+        </div>
+    </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div><div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+            <img src="/content/game_art/ga_ana.png">
+        </div>
+    </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div><div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+            <img src="/content/game_art/ga_ana.png">
+        </div>
+    </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div><div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+            <img src="/content/game_art/ga_ana.png">
+        </div>
+    </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div><div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+            <img src="/content/game_art/ga_ana.png">
+        </div>
+    </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div><div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+            <img src="/content/game_art/ga_ana.png">
+        </div>
+    </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                <img src="/content/game_art/ga_ana.png">
+            </div>
+        </div>
+
+        --}}
+
+    </div>
+</div>

@@ -1,0 +1,122 @@
+<div class="background main">
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="content">
+                    <div class="showbox">
+                        <!-- carousel images for main slider -->
+                        <img class="slide" src="/content/profiles/PI_Ana_Cute_Ana.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Bastion_Cute_Bastion.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Doomfist_Cute_Doomfist.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_D.Va_Cute_D.Va.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Genji_Cute_Genji.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Hanzo_Cute_Hanzo.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Junkrat_Cute_Junkrat.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Lúcio_Cute_Lúcio.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_McCree_Cute_McCree.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Mei_Cute_Mei.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Mercy_Cute_Mercy.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Moira_Cute_Moira.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Orisa_Cute_Orisa.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Pharah_Cute_Pharah.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Reaper_Cute_Reaper.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Reinhardt_Cute_Reinhardt.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Roadhog_Cute_Roadhog.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_S76_Cute_Soldier_76.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Sombra_Cute_Sombra.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Torbjörn_Cute_Torbjörn.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Tracer_Cute_Tracer.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Widowmaker_Cute_Widowmaker.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Winston_Cute_Winston.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Zarya_Cute_Zarya.png" style="width: 100%;">
+                        <img class="slide" src="/content/profiles/PI_Zenyatta_Cute_Zenyatta.png" style="width: 100%;">
+                        <!-- end carousel -->
+                    </div>
+                    <h1 class="text h1-text">Stat Visualizer</h1>
+                    <h3 class="text h3-text">See your game stats!</h3>
+                    <hr>
+                    <div class="buffer"></div>
+                    <a href="#searchSection"><button class="fill text"><i class="glyphicon glyphicon-search" style="padding-right: 15px; margin-left: -5px;"></i>Get Started!</button></a>
+                    {{#if user}}
+                        <!-- Link to favourites page -->
+                        <button class="fill text" id="favourites"><i class="glyphicon glyphicon-star" style="padding-right: 15px; margin-left: -5px;"></i>{{user.username}}'s Favourites</button>
+                    {{else}}
+                        <a href="/auth/login"><button class="fill text"><i class="glyphicon glyphicon-user" style="padding-right: 15px; margin-left: -5px;"></i>Log In</button></a>
+                    {{/if}}
+
+
+                    <div class="disclaimer text">
+                        All content is available under CC BY-NC-SA 3.0 unless otherwise noted.
+                        Game content and materials are trademarks and copyrights of their respective publisher and its licensors. All rights reserved.
+                        This site is a student project and is not affiliated with the game publisher.
+                    </div>
+
+                    {{>favourites}}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- PUT OTHER SECTIONS HERE -->
+
+    {{>search}}
+
+
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+    /** JavaScript functions courtesy of W3Schools.com */
+
+
+    /* Code for the carousel on the first page */
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("slide");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+
+
+    /* Automatic smooth scroll */
+    $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800);
+            } // End if
+        });
+    });
+
+    /* Toggle the visibility of favourites list */
+    $('#favourites').click(function() {
+        var element = document.getElementById("favourites-display");
+        element.classList.toggle("invisible");
+    });
+
+</script>
